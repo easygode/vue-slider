@@ -3,7 +3,7 @@ const {createApp} = Vue;
 const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell'applicazione Vue
     data(){
         return{
-            activeImage: 0,
+            currentSlide: 0,
             pageTitle: 'Superhereos',
             slides: [
                 {   image:'img/01.webp',
