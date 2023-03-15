@@ -4,6 +4,7 @@ const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell
     data(){
         return{
             currentSlide: 0,
+            timeOutTime: 3,
             pageTitle: 'Superhereos',
             slides: [
                 {   image:'img/01.webp',
@@ -42,7 +43,13 @@ const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell
 
         },
         mounted(){
-
+            // let self = this;   senza arrow function, setInterval viene eseguito nello scope di windows
+            // setInterval(function(){
+            //     self.nextSlide();
+            // }, this.timeOutTime * 1000);
+            setInterval(() => {   // usando arrow function, lo scope diventa quello di esecuzione della funzione
+                this.nextSlide();
+            }, this.timeOutTime * 1000);
         },
         methods: {
             nextSlide(){
