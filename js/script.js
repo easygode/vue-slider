@@ -45,22 +45,22 @@ const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell
 
         },
         methods: {
-            nextImage(){
-                this.activeImage++;
+            nextSlide(){
+                this.currentSlide++;
     
-                if(this.activeImage > this.slides.image - 1){
-                    this.activeImage = 0;
-                }
+                //if(this.activeImage > this.slides.image - 1){
+                    //this.currentSlide = 0;
+                //}
             },
-            prevImage(){
-                this.activeImage--;
+            prevSlide(){
+                this.currentSlide--;
     
-                if(this.activeImage < 0){
-                this.activeImage = this.slides.image - 1;
-                }
+                //if(this.activeImage < 0){
+                //this.currentSlide = this.slides.image - 1;
+                //}
             },
             selectImg(index, event){
-                this.activeImage = index;
+                this.currentSlide = index;
             }
         },
 });
