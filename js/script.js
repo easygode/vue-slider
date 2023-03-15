@@ -48,20 +48,20 @@ const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell
             nextSlide(){
                 this.currentSlide++;
     
-                //if(this.activeImage > this.slides.image - 1){
-                    //this.currentSlide = 0;
-                //}
+                if(this.currentSlide > this.slides.length - 1){
+                    this.currentSlide = 0;
+                }
             },
             prevSlide(){
                 this.currentSlide--;
     
-                //if(this.activeImage < 0){
-                //this.currentSlide = this.slides.image - 1;
-                //}
+                if(this.currentSlide < 0){
+                this.currentSlide = this.slides.length - 1;
+                }
             },
-            selectImg(index, event){
-                this.currentSlide = index;
-            }
+            //selectImg(index, event){
+                //this.currentSlide = index;
+            //}
         },
 });
 
