@@ -1,6 +1,6 @@
 const {createApp} = Vue;
 
-const app = createApp({
+const myApp = createApp({ //definendo una costante si crea un ciclo di vita dell'applicazione Vue
     data(){
         return{
             activeImage: 0,
@@ -32,6 +32,18 @@ const app = createApp({
                 }]
             }
         },
+        beforeCreate(){   //non abbiamo accesso alle informazioni, "init Options API" non è ancora avvenuto
+
+        },
+        created(){
+
+        },
+        beforeMount(){
+
+        },
+        mounted(){
+
+        },
         methods: {
             nextImage(){
                 this.activeImage++;
@@ -51,6 +63,6 @@ const app = createApp({
                 this.activeImage = index;
             }
         },
-})
+});
 
-app.mount('#app');
+myApp.mount('#app');
